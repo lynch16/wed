@@ -5,7 +5,7 @@ var app = angular.module('app', [
   'ngMaterial',
   'ngMessages'
 ]).run(function () {
-}).config(function($stateProvider, $urlRouterProvider, $locationProvider){
+}).config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider){
   $locationProvider.hashPrefix('');
   $urlRouterProvider.otherwise('/');
   $stateProvider
