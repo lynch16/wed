@@ -37,4 +37,4 @@ var app = angular.module('app', [
       url: 'FAQ',
       component: 'faqComponent'
     });
-});
+}]);
