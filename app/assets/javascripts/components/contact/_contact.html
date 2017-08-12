@@ -1,0 +1,34 @@
+<div class="col-xs-12">
+  <h1 class="text-center">Contact Us</h1>
+  <h5 class="text-center">Need more information?</h5>
+  <p class="text-center">Please fill out the form below and Will or Jenna will be in touch!!</p>
+  <form name="contactForm" class="row" ng-submit="contactCtrl.submitForm(contactForm.$valid)" novalidate>
+    <div class="col-xs-4 col-xs-offset-4">
+      <md-input-container class="md-block">
+        <label for="name">Name</label>
+        <input type="text" name="name"
+          ng-model="contactCtrl.contactForm.name"
+          required>
+      </md-input-container>
+      <md-input-container class="md-block">
+        <label for="email">Email</label>
+        <input type="text" name="email"
+          ng-model="contactCtrl.contactForm.email"
+          ng-required="!contactForm.phone">
+      </md-input-container>
+      <md-input-container class="md-block">
+        <label for="phone">Phone #</label>
+        <input type="text" name="phone"
+          ng-model="contactCtrl.contactForm.phone"
+          ng-required="!contactForm.email">
+      </md-input-container>
+      <md-input-container class="md-block">
+        <label for="phone">Message</label>
+        <textarea name="message"
+          rows="5"
+          ng-model="contactCtrl.contactForm.message"></textarea>
+      </md-input-container>
+      <button type="submit" class="btn" ng-class="contactForm.$valid ? 'btn-success': 'btn-danger'">Submit</button>
+    </div>
+  </form>
+</div>
