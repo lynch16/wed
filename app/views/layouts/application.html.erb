@@ -9,9 +9,13 @@
   <%= csrf_meta_tags %>
   </head>
 <body>
-  <div ng-app="app">
-    <ui-view></ui-view>
+  <div ng-app="app" class="container-fluid">
+    <div class="row">
+      <header-component class="col-xs-12"></header-component>
+    </div>
+    <div class="row">
+      <ui-view class="col-xs-12" style="margin-top: 52px;"></ui-view>
+    </div>
   </div>
-</div>
 </body>
 </html>

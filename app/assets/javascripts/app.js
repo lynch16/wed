@@ -13,28 +13,28 @@ var app = angular.module('app', [
       url: '/',
       component: 'rootComponent'
     })
-    .state('root.wedding', {
-      url: 'wedding',
+    .state('wedding', {
+      url: '/wedding',
       component: 'weddingComponent'
     })
-    .state('root.contact', {
-      url: 'contact',
+    .state('contact', {
+      url: '/contact',
       component: 'contactComponent'
     })
-    .state('root.party', {
-      url: 'wedding-party',
+    .state('party', {
+      url: '/wedding-party',
       component: 'partyComponent'
     })
-    .state('root.story', {
-      url: 'our-story',
+    .state('story', {
+      url: '/our-story',
       component: 'storyComponent'
     })
-    .state('root.registry', {
-      url: 'registry',
+    .state('registry', {
+      url: '/registry',
       component: 'registryComponent'
     })
-    .state('root.faq', {
-      url: 'FAQ',
+    .state('faq', {
+      url: '/FAQ',
       component: 'faqComponent'
     });
 }]);

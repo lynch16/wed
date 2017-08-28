@@ -1,6 +1,48 @@
 .root  {
+  background-image: url(11223907_2936317323302_5357320228164599132_n.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white;
+  height: 100vh;
+  .heading {
+    padding-top: .4em;
+    color: white;
+    text-shadow: 2px 2px #aaa;
+    font-size: 50px;
+    font-family: 'Meddon', cursive;
+  }
+  .info {
+    position: absolute;
+    top: 35%;
+    color: white;
+    h4 {
+      font-family: 'Sedgwick Ave', cursive;
+      font-size: 36px;
+      &.countdown {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+#navigation {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  font-family: 'Calligraffitti', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  .nav.navbar-nav.navbar-right {
+    font-size: 16px;
+  }
+  .nav>li>a.active, .nav>li>a.active:focus{
+    background-color: #ccc;
+  }
 }
