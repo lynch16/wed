@@ -3,7 +3,8 @@ var app = angular.module('app', [
   'templates',
   'ngAnimate',
   'ngMaterial',
-  'ngMessages'
+  'ngMessages',
+  'ngMap'
 ]).run(function () {
 }).config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider){
   $locationProvider.hashPrefix('');

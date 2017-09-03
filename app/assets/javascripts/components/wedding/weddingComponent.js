@@ -4,8 +4,11 @@ app.component('weddingComponent', {
   controllerAs: "weddingCtrl"
 });
 
-function weddingController() {
+function weddingController(NgMap) {
   var weddingCtrl = this;
   weddingCtrl.$onInit = function() {
+    NgMap.getMap().then(function(map){
+      console.log(map.getCenter());
+    });
   };
 }
