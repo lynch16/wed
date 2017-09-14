@@ -5,6 +5,21 @@
 }
 .party-ind-photo {
   max-height: 300px;
+  max-width: 275px;
   display: block;
   margin: auto;
+}
+.party-wrapper {
+  background-image: url(1424842094-43ea109d58020990-backgroundtexture-urban5.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  height: calc(100vh + 50px);
+  overflow-y: hidden;
+  .inner-party-wrapper {
+    overflow-y: auto;
+  }
+}
+
+.party {
+  background-color: white;
 }
