@@ -1,6 +1,6 @@
 app.component('rootComponent', {
   templateUrl: 'components/root/_root.html',
-  controller: rootController,
+  controller: ["$state", rootController],
   controllerAs: "rootCtrl"
 });
 

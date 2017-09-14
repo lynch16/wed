@@ -1,6 +1,6 @@
 app.component('weddingComponent', {
   templateUrl: 'components/wedding/_wedding.html',
-  controller: weddingController,
+  controller: ["NgMap", weddingController],
   controllerAs: "weddingCtrl"
 });
 
