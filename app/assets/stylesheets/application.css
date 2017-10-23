@@ -17,6 +17,7 @@
 @import url('https://fonts.googleapis.com/css?family=Calligraffitti|Meddon|Sedgwick+Ave');
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
 @import url('https://fonts.googleapis.com/css?family=Handlee');
+@import url('https://fonts.googleapis.com/css?family=Ruthie');
 
 .calig {
   font-family: 'Calligraffitti', cursive;
@@ -24,3 +25,6 @@
 .satisfy {
   font-family: 'Satisfy', cursive;
 }
+-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;

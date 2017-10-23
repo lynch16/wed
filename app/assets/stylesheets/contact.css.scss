@@ -1,0 +1,26 @@
+.contact-background {
+    background-image: url(contact.JPG);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    label {
+        vertical-align: top;
+    }
+    .md-resize-wrapper {
+        display: inline-block;
+        width: 100%;
+    }
+    .btn {
+        margin-bottom: 20px;
+    }
+    input {
+        width: 100%;
+    }
+    textarea {
+        width: 100%;
+    }
+    p {
+        font-size: 20px;
+    }
+}

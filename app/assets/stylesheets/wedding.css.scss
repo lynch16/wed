@@ -1,11 +1,30 @@
-.wedding-header {
-  font-size: 50px;
-}
-.wedding-body {
-  font-family: 'Calligraffitti', cursive;
-  font-size: 20px;
-}
-.to-do {
-  font-family: 'Handlee', cursive;
-  font-size: 20px;
+wedding-component{
+    img {
+        margin-top: -16em;
+        display: block;
+    }
+    .wedding-wrapper {
+        hr{
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+    }
+    .wedding-header {
+        font-size: 40px;
+    }
+    .wedding-body {
+        font-family: 'Calligraffitti', cursive;
+        font-size: 20px;
+    }
+    .to-do {
+        font-family: 'Handlee', cursive;
+        font-size: 20px;
+        .footer {
+            font-size: 16px;
+        }
+        .location-header {
+            font-weight: bold;
+            // text-decoration: underline;
+        }
+    }
 }

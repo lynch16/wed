@@ -7,9 +7,15 @@ app.component('rootComponent', {
 function rootController($state) {
   var rootCtrl = this;
   rootCtrl.$onInit = function() {
-    var now = Date.now();
-    var weddingDate = new Date(2018, 08, 24);
-    rootCtrl.countdown = Math.round(Math.abs((now - weddingDate.getTime())/(26*60*60*1000)));
+    var oneDay = 24 * 60 * 60 * 1000;
+    var now = new Date();
+    var weddingDate = new Date(2018, 07, 24);
+    rootCtrl.countdown = Math.round(Math.abs((now.getTime() - weddingDate.getTime())/(oneDay)));
+    if(rootCtrl.countdown > 1){
+        rootCtrl.countdown = rootCtrl.countdown + " days";
+    } else {
+        rootCtrl.countdown = rootCtrl.countdown + " day";
+    }
   };
 
   rootCtrl.backgroundImg = function(){
