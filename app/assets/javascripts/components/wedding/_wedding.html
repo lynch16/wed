@@ -18,6 +18,10 @@
         map-lazy-load-params="{{googleMapsUrl}}">
         <ng-map center="43.443193,-71.5934472" zoom="13">
           <marker position="43.443193,-71.5934472" title="La Piece">
+          <marker icon='http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+            ng-repeat="place in weddingCtrl.places.stay"
+            position="{{place.position}}"
+            title="{{place.title}}">
         </ng-map>
       </div>
     </div>

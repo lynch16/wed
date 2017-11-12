@@ -19,7 +19,7 @@ function faqController() {
       answer: "Please allow at least 1 hour from Manchester, NH - Friday traffic can be crazy!!"
     },{
       question: "Where can I park my car? What about overnight?",
-      answer: "Overnight parking at La Piece is no problem."
+      answer: "Overnight parking at La Piece is no problem. Just pick up your vehicle by noon the following day."
     }, {
       question: "What if I have a question for the Bride and Groom?",
       answer: "Reach out to use via our 'Contact Us' page! We will he happy to get back to you as soon as possible."
