@@ -1,0 +1,51 @@
+.question-button {
+    position: fixed;
+    bottom: 50px;
+    right: 4%;
+    z-index: 100;
+}
+.contact-button, .question-button {
+    display: inline-block;
+    height: 40px;
+    width: 200px;
+    border-radius: 100px;
+    border: 2px solid white;
+    color: white;
+    background-color: grey;
+    &:hover {
+        background-color: #ebebeb;
+        color: grey;
+        border-color: grey;
+    }
+    &:focus {
+        outline: 0;
+    }
+}
+
+.contact {
+    label {
+        vertical-align: top;
+    }
+    .md-resize-wrapper {
+        display: inline-block;
+        width: 100%;
+    }
+    .btn {
+        margin-bottom: 20px;
+    }
+    input {
+        width: 100%;
+    }
+    textarea {
+        width: 100%;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+.contact-background {
+    background-image: image-url("contact.JPG");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

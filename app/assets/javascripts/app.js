@@ -1,5 +1,6 @@
 var app = angular.module('app', [
   'ui.router',
+  'ui.bootstrap',
   'templates',
   'ngAnimate',
   'ngMaterial',
@@ -11,30 +12,34 @@ var app = angular.module('app', [
   $urlRouterProvider.otherwise('/');
   $stateProvider
     .state('root', {
-      url: '/',
+      abstract: true,
       component: 'rootComponent'
     })
-    .state('wedding', {
+    .state('root.home', {
+        url: '/',
+        component: 'homeComponent'
+    })
+    .state('root.wedding', {
       url: '/wedding',
       component: 'weddingComponent'
     })
-    .state('contact', {
+    .state('root.contact', {
       url: '/contact',
       component: 'contactComponent'
     })
-    .state('party', {
+    .state('root.party', {
       url: '/wedding-party',
       component: 'partyComponent'
     })
-    .state('story', {
+    .state('root.story', {
       url: '/our-story',
       component: 'storyComponent'
     })
-    .state('registry', {
+    .state('root.registry', {
       url: '/registry',
       component: 'registryComponent'
     })
-    .state('faq', {
+    .state('root.faq', {
       url: '/FAQ',
       component: 'faqComponent'
     });

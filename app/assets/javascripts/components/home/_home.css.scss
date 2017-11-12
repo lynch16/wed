@@ -1,0 +1,27 @@
+.home  {
+  background-image: image-url("root.JPG");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #CCC;
+  height: auto;
+  min-height: calc(100vh - 52px);
+  .heading {
+    padding-top: 25%;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 100px;
+    font-family: 'Ruthie', cursive;
+  }
+  .info {
+      text-shadow: 2px 2px black;
+      color: white;
+    h4 {
+      font-family: 'Sedgwick Ave', cursive;
+      font-size: 36px;
+      &.countdown {
+        font-weight: bold;
+      }
+    }
+  }
+}

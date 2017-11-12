@@ -1,4 +1,106 @@
-<div class="row contact">
+<button type="button"
+        class="question-button"
+        name="contactUs"
+        ng-click="contactCtrl.showModal = true">Questions?</button>
+<div class="modal"
+     ng-if="contactCtrl.showModal"
+     ng-click="contactCtrl.showModal = false"
+     tabindex="-1" role="dialog"
+     aria-labelledby="contactUs">
+    <div class="modal-content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1"
+         role="document"
+         ng-click="$event.stopPropagation()">
+         <div ng-if="contactCtrl.page === 'faq'">
+             <div class="modal-header">
+                 <h1 class="text-center satisfy">FAQs</h1>
+             </div>
+             <div class="modal-body">
+                 <div class="row">
+                     <div class="col-xs-12" ng-repeat="question in contactCtrl.faq">
+                       <strong><p><span>Q: </span><span ng-bind="question.question"></span></p></strong>
+                       <p><span>A: </span><span ng-bind="question.answer"></span></p>
+                     </div>
+                     <div class="col-xs-12">
+                          <strong><p><span>Q: What if I have a question for the Bride and Groom?</span></p></strong>
+                          <div class="text-center">
+                              <button type="button"
+                              class="contact-button"
+                              name="questions"
+                              ng-click="contactCtrl.page = 'contact'">Contact Us!</button>
+                          </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <div class="contact" ng-if="contactCtrl.page === 'contact'">
+             <div class="modal-header">
+                 <button tooltip-placement="right"
+                    uib-tooltip="Back to FAQ"
+                    type="button" class="pull-left close"
+                    aria-label="Close"
+                    ng-click="contactCtrl.page = 'faq'">
+                    <span aria-hidden="true" ng-include="'assets/chevron.svg'"></span>
+                </button>
+                 <h1 class="text-center satisfy">Contact Us</h1>
+             </div>
+             <div class="modal-body">
+                 <div class="row">
+                     <div class="col-xs-12">
+                         <strong><p class="text-left satisfy">Need more information?</p></strong>
+                         <p class="text-left satisfy">Please fill out the form and Will or Jenna will be in touch!!</p>
+                     </div>
+                     <form name="contactForm" class="col-xs-12" ng-submit="contactCtrl.submitForm(contactForm.$valid)" novalidate>
+                         <md-input-container class="md-block">
+                             <label for="name">Name</label>
+                             <input type="text" name="name"
+                                md-no-asterisk
+                                ng-model="contactCtrl.contactForm.name"
+                                required>
+                             <div ng-messages="contactForm.name.$error">
+                                 <div ng-message="required">Please enter your name</div>
+                             </div>
+                         </md-input-container>
+                         <md-input-container class="md-block">
+                             <label for="email">Email</label>
+                             <input type="text" name="email"
+                                md-no-asterisk
+                                ng-model="contactCtrl.contactForm.email"
+                                ng-required="!contactCtrl.contactForm.phone">
+                             <div ng-messages="contactForm.email.$error">
+                                 <div ng-message="email">Please use a valid email</div>
+                                 <div ng-message="required">Please provide an email or phone number to reach you</div>
+                             </div>
+                         </md-input-container>
+                         <md-input-container class="md-block">
+                             <label for="phone">Phone #</label>
+                             <input type="text" name="phone"
+                                md-no-asterisk
+                                ng-model="contactCtrl.contactForm.phone"
+                                ng-required="!contactCtrl.contactForm.email">
+                             <div ng-messages="contactForm.email.$error">
+                                 <div ng-message="required">Please provide an email or phone number to reach you</div>
+                             </div>
+                         </md-input-container>
+                         <md-input-container class="md-block">
+                             <label for="phone">Message</label>
+                             <textarea name="message"
+                                rows="2"
+                                ng-model="contactCtrl.contactForm.message"></textarea>
+                         </md-input-container>
+                         <div class="text-center">
+                             <button type="submit" class="btn" ng-class="contactForm.$valid ? 'btn-success': 'btn-danger'">Submit</button>
+                         </div>
+                     </form>
+                 </div>
+             </div>
+         </div>
+
+
+    </div>
+</div>
+
+<!-- <div class="row contact">
     <div class="col-xs-12">
         <div class="row">
             <div class="col-xs-12" style="background-color: white;">
@@ -41,4 +143,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

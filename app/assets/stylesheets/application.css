@@ -11,17 +11,6 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
- *= require_self
+ *= require_tree ../javascripts
+ *= require angular-material
  */
-
-@import url('https://fonts.googleapis.com/css?family=Calligraffitti|Meddon|Sedgwick+Ave');
-@import url('https://fonts.googleapis.com/css?family=Satisfy');
-@import url('https://fonts.googleapis.com/css?family=Handlee');
-@import url('https://fonts.googleapis.com/css?family=Ruthie');
-
-.calig {
-  font-family: 'Calligraffitti', cursive;
-}
-.satisfy {
-  font-family: 'Satisfy', cursive;
-}

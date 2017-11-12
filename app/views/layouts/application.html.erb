@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Lets Be Lynches</title>
   <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' %>
   <%= stylesheet_link_tag 'application', media: 'all'%>
   <%= javascript_include_tag 'application', media: 'all' %>
@@ -11,12 +11,13 @@
   </head>
 <body>
   <div ng-app="app" class="container-fluid">
-    <div class="row">
+      <ui-view></ui-view>
+    <!-- <div class="row">
       <header-component class="col-xs-12"></header-component>
     </div>
     <div class="row">
       <ui-view class="col-xs-12"></ui-view>
-    </div>
+    </div> -->
   </div>
 </body>
 </html>
