@@ -30,6 +30,7 @@ function contactController(contactService, alertService) {
       if(!valid) {return;}
       contactService.submitContactForm(contactCtrl.contactForm).then(function(){
           alertService.addAlert('Submitted!', 'success');
+          contactCtrl.showModal = false;
       });
   };
 }
