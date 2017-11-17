@@ -1,9 +1,8 @@
 app.component('alertComponent', {
   templateUrl: 'components/alert/_alert.html',
-  controller: alertController,
+  controller: ['alertService', alertController],
   controllerAs: "alertCtrl"
 });
-
 function alertController(alertService) {
   var alertCtrl = this;
   alertCtrl.$onInit = function() {

@@ -1,6 +1,6 @@
 app.component('contactComponent', {
   templateUrl: 'components/contact/_contact.html',
-  controller: contactController,
+  controller: ['contactService', 'alertService', contactController],
   controllerAs: "contactCtrl"
 });
 
