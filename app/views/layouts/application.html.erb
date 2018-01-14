@@ -6,18 +6,13 @@
   <%= stylesheet_link_tag 'application', media: 'all'%>
   <%= javascript_include_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' %>
+  <%= favicon_link_tag 'favicon.png' %>
   <script async defer type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAg2h8deeyMifKeY07Sh8xEheMsSR-qzfg"></script>
   <%= csrf_meta_tags %>
   </head>
 <body>
   <div ng-app="app" class="container-fluid">
       <ui-view></ui-view>
-    <!-- <div class="row">
-      <header-component class="col-xs-12"></header-component>
-    </div>
-    <div class="row">
-      <ui-view class="col-xs-12"></ui-view>
-    </div> -->
   </div>
 </body>
 </html>
