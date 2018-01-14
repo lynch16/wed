@@ -1,56 +1,33 @@
 <div class="row party-wrapper">
+    <!-- <div class="col-xs-1">
+        <div class="row text-right">
+                <button type="button" class="party-filter"
+                    ng-click="partyCtrl.partyFilter = ''">All</button>
+        </div>
+        <div class="row text-right">
+            <button type="button" class="party-filter"
+                ng-click="partyCtrl.partyFilter = 'Maid of Honor'">MoH</button>
+        </div>
+    </div> -->
     <div class="col-xs-10 col-xs-offset-1">
         <div class="row">
           <div class="col-xs-12 text-center">
-            <h1 class="calig"><strong>Meet the Wedding Party</strong></h1>
+            <h1 class="calig" style="color: white; text-shadow: 2px 2px rgba(0,0,0,.5);"><strong>Meet the Wedding Party</strong></h1>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-6 col-xs-12">
-            <h3 class="text-center calig"><strong>Maid of Honor</strong></h3>
-            <div class="row">
-              <div class="col-xs-12">
-                <img class="party-ind-photo" ng-src="{{partyCtrl.maidOfHonor.imgURL}}" alt="">
-                <h5 class="text-center name" ng-bind="partyCtrl.maidOfHonor.name"></h5>
-                <p ng-bind="partyCtrl.maidOfHonor.description"></p>
-              </div>
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 party-card" ng-repeat="member in partyCtrl.weddingParty | filter: {type: partyCtrl.partyFilter}">
+                <div class="row">
+                  <div class="col-xs-4">
+                    <img class="party-ind-photo" ng-src="{{member.imgURL}}" alt="">
+                  </div>
+                  <div class="col-xs-8">
+                    <h3 class="text-center calig"><strong ng-bind="member.name"></strong></h3>
+                    <h5 class="text-left name" ng-bind="member.type"></h5>
+                    <p ng-bind="member.description"></p>
+                  </div>
+                </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-xs-12">
-            <h3 class="text-center calig"><strong>Best Man</strong></h3>
-            <div class="row">
-              <div class="col-xs-12">
-                <img class="party-ind-photo" ng-src="{{partyCtrl.bestMan.imgURL}}" alt="">
-                <h5 class="text-center name" ng-bind="partyCtrl.bestMan.name"></h5>
-                <p ng-bind="partyCtrl.bestMan.description"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6 col-xs-12">
-            <h3 class="text-center calig"><strong>Bridesmaids</strong></h3>
-            <div class="row" ng-repeat="bridesmaid in partyCtrl.bridesmaids">
-              <div class="col-xs-12">
-                <img class="party-ind-photo" ng-src="{{bridesmaid.imgURL}}" alt="">
-                <h5 class="text-center name" ng-bind="bridesmaid.name"></h5>
-                <p ng-bind="bridesmaid.description"></p>
-                <br>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-xs-12">
-            <h3 class="text-center calig"><strong>Groomsmen</strong></h3>
-            <div class="row" ng-repeat="groomsman in partyCtrl.groomsmen">
-              <div class="col-xs-12">
-                <img class="party-ind-photo" ng-src="{{groomsman.imgURL}}" alt="">
-                <h5 class="text-center name" ng-bind="groomsman.name"></h5>
-                <p ng-bind="groomsman.description"></p>
-                <br>
-                <br>
-              </div>
-            </div>
-          </div>
         </div>
     </div>
 </div>

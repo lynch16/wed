@@ -1,82 +1,96 @@
 <div class="row">
   <img src="assets/wedding.jpg" width="100%" alt="">
-</div>
-<div class="wedding-wrapper col-xs-12" style="margin-bottom:20px;">
-  <div class="row wedding-body">
-    <div class="col-sm-6 col-xs-12 text-center">
-      <h1 class="wedding-header satisfy">Our Wedding</h1>
-      <p style="font-weight: bold">La Piece - The Room | Tilton, NH | Friday, August 24, 2018</p>
-      <p>4:30pm - Guests Arrive at Venue, La Piece</p>
-      <p>5:00pm - Ceremony</p>
-      <p>5:30pm - Cocktail Hour</p>
-      <p>6:30pm - Reception</p>
-      <p>10:00pm - Bonvoyage (ask bride & groom about the after party)</p>
-    </div>
-    <div class="col-sm-6 col-xs-12">
-      <div
-        style="margin-top: 20px;"
-        map-lazy-load-params="{{googleMapsUrl}}">
-        <ng-map zoom="13">
-          <marker ng-repeat="place in weddingCtrl.places"
-            centered="{{place.centered}}"
-            icon={{place.icon}}
-            position="{{place.position}}"
-            title="{{place.title}}">
-        </ng-map>
+    <div class="wedding-wrapper col-xs-12">
+      <div class="row wedding-body">
+        <div class="col-sm-6 col-xs-12 text-center">
+          <h1 class="wedding-header satisfy">Our Wedding</h1>
+          <p class="wedding-venue"><a target="_blank" href="http://lapiece-theroom.com/">La Piece - The Room</a> | Tilton, NH | Friday, August 24, 2018</p>
+          <p>4:30pm - Guests Arrive at Venue, La Piece</p>
+          <p>5:00pm - Ceremony</p>
+          <p>5:30pm - Cocktail Hour</p>
+          <p>6:30pm - Reception</p>
+          <p>10:00pm - Bonvoyage (ask bride & groom about the after party)</p>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <div
+            style="margin-top: 20px; margin-bottom: 20px;">
+            <ng-map default-style="true" zoom="13" center="{{weddingCtrl.mapCenter}}">
+                <info-window id="details" position="{{weddingCtrl.activeMarker.position}}">
+                    <div ng-non-bindable>
+                        <h4 class="satisfy">{{weddingCtrl.activeMarker.title}}</h4>
+                        <h5>{{weddingCtrl.activeMarker.type}}</h5>
+                        <p ng-if="weddingCtrl.activeMarker.type === 'Accomodation'">Ask for the Loranger/Lynch Room block</p>
+                        <p ng-if="weddingCtrl.activeMarker.id === 2" ng-bind="'Shuttles Provided from La Piece to HI&S at 10pm following the reception.
+
+'"></p>
+                      <div ng-if="weddingCtrl.activeMarker.id === 1">
+                          <p>4:30pm - Guests Arrive</p>
+                          <p>5:00pm - Ceremony</p>
+                      </div>
+                      <a ng-href="{{weddingCtrl.activeMarker.link}}">{{weddingCtrl.activeMarker.title}}'s website</a>
+                    </div>
+              </info-window>
+              <marker ng-repeat="place in weddingCtrl.places"
+                id='{{place.id}}'
+                icon={{place.icon}}
+                position="{{place.position}}"
+                title="{{place.title}}"
+                on-click="weddingCtrl.openWindow(place)">
+            </ng-map>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 text-center to-do">
+            <h1 class="wedding-header satisfy">Where to Stay</h1>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <p class="location-header">Want to be near the wedding venue?</p>
+                    <p><a target="_blank" href="http://hamptoninn3.hilton.com/en/hotels/new-hampshire/hampton-inn-and-suites-tilton-CONTNHX/index.html">Hampton Inn and Suites, Tilton, NH**(1)</a></p>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <p class="location-header">Want to be near the lake?</p>
+                    <p><a target="_blank" href="http://www.opecheeinn.com/">Lake Opechee Inn and Spa, Laconia, NH**</a></p>
+                </div>
+            </div>
+            <br>
+            <p class="footer">**(Ask for the Loranger/Lynch Room block)</p>
+            <p class="footer" ng-bind="'(1) Shuttles Provided from La Piece to HI&S at 10pm following the reception.'"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 text-center to-do">
+            <h1 class="wedding-header satisfy">Things to do near Tilton, NH</h1>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <h1 class="satisfy">Bars & Restaraunts</h1>
+                    <p><a target="_blank" href="http://www.thecman.com/restaurants-and-menus/tilt-n-diner.aspx">Tilt'n Diner,  Tilton, NH - "A Local Favorite"</a></p>
+                    <p><a target="_blank" href="https://www.thetiltoninn.com/">The Tilton Inn, Tilton NH</a></p>
+                    <p><a target="_blank" href="http://concord.thebarleyhouse.com/">The Barley House, Concord, NH</a></p>
+                    <p><a target="_blank" href="http://www.thecman.com/restaurants-and-menus/common-man-restaurants/common-man-concord.aspx">The Common Man, Concord, NH</a></p>
+                    <p><a target="_blank" href="http://www.thecman.com/restaurants-and-menus/lago.aspx">Lago, Meredith, NH</a></p>
+                    <p><a target="_blank" href="http://www.thecman.com/restaurants-and-menus/town-docks.aspx">Town Docks, Meredith, NH</a></p>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <h1 class="satisfy">Activities</h1>
+                    <p><a target="_blank" href="http://www.lakewinnipesaukee.info/things-to-do">Weirs Beach / Lake Winnipesaukee</a></p>
+                    <p><a target="_blank" href="https://blog.nhstateparks.org/mt-major-family-friendly-hike/">Lake Winnisquam</a></p>
+                    <p><a target="_blank" href="http://pitmansfreightroom.com/">Pitmans Freight Room</a></p>
+                    <p><a target="_blank" href="https://www.tangeroutlet.com/tilton/stores">Tanger Outlets</a></p>
+                    <p><a target="_blank" href="http://www.justmaple.com/">Just Maple</a></p>
+                </div>
+            </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <hr>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 text-center to-do">
-        <h1 class="wedding-header satisfy">Where to Stay</h1>
-        <div class="row">
-            <div class="col-sm-6 col-xs-12">
-                <p class="location-header">Want to be near the wedding venue?</p>
-                <p>Hampton Inn and Suites, Tilton, NH**(1)</p>
-            </div>
-            <div class="col-sm-6 col-xs-12">
-                <p class="location-header">Want to be near the lake?</p>
-                <p>Lake Opechee Inn and Spa, Laconia, NH**</p>
-            </div>
-        </div>
-        <br>
-        <p class="footer">**(Ask for the Loranger/Lynch Room block)</p>
-        <p class="footer">(1) Shuttles Provided from La Piece to HI&S at 10pm following the reception.</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <hr>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 text-center to-do">
-        <h1 class="wedding-header satisfy">Things to do near Tilton, NH</h1>
-        <div class="row">
-            <div class="col-sm-6 col-xs-12">
-                <h1 class="satisfy">Bars & Restaraunts</h1>
-                <p>Tilt'n Diner,  Tilton, NH - "A Local Favorite"</p>
-                <p>The Tilton Inn, Tilton NH</p>
-                <p>The Barley House, Concord, NH</p>
-                <p>The Common Man, Concord, NH</p>
-                <p>Nazbar and Grill, Laconia, NH</p>
-                <p>Lago, Meredith, NH</p>
-                <p>Town Docks, Meredith, NH</p>
-            </div>
-            <div class="col-sm-6 col-xs-12">
-                <h1 class="satisfy">Activities</h1>
-                <p><a href="http://www.lakewinnipesaukee.info/things-to-do">Weirs Beach / Lake Winnipesaukee</a></p>
-                <p><a href="https://blog.nhstateparks.org/mt-major-family-friendly-hike/">Lake Winnisquam</a></p>
-                <p><a href="http://pitmansfreightroom.com/">Pitmans Freight Room</a></p>
-                <p><a href="https://www.tangeroutlet.com/tilton/stores">Tanger Outlets</a></p>
-                <p><a href="http://www.justmaple.com/">Just Maple</a></p>
-            </div>
-        </div>
-    </div>
-  </div>
 </div>

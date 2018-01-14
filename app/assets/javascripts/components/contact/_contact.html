@@ -12,6 +12,13 @@
          ng-click="$event.stopPropagation()">
          <div ng-if="contactCtrl.page === 'faq'">
              <div class="modal-header">
+                 <button tooltip-placement="right"
+                    uib-tooltip="Close"
+                    type="button" class="pull-left close"
+                    aria-label="Close"
+                    ng-click="contactCtrl.showModal = false">
+                    <span aria-hidden="true" ng-include="'assets/close.svg'"></span>
+                </button>
                  <h1 class="text-center satisfy">FAQs</h1>
              </div>
              <div class="modal-body">
@@ -38,7 +45,7 @@
                  <button tooltip-placement="right"
                     uib-tooltip="Back to FAQ"
                     type="button" class="pull-left close"
-                    aria-label="Close"
+                    aria-label="Back"
                     ng-click="contactCtrl.page = 'faq'">
                     <span aria-hidden="true" ng-include="'assets/chevron.svg'"></span>
                 </button>

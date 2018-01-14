@@ -7,10 +7,10 @@
   height: auto;
   min-height: calc(100vh - 52px);
   .heading {
-    padding-top: 25%;
+    padding-top: 20%;
     color: white;
     text-shadow: 2px 2px black;
-    font-size: 100px;
+    font-size: 10vw;
     font-family: 'Ruthie', cursive;
   }
   .info {
@@ -18,7 +18,7 @@
       color: white;
     h4 {
       font-family: 'Sedgwick Ave', cursive;
-      font-size: 36px;
+      font-size: 6vw;
       &.countdown {
         font-weight: bold;
       }

@@ -4,6 +4,7 @@ wedding-component{
         display: block;
     }
     .wedding-wrapper {
+        padding-bottom: 3em;
         hr{
             margin-top: 0;
             margin-bottom: 5px;
@@ -25,6 +26,12 @@ wedding-component{
         .location-header {
             font-weight: bold;
             // text-decoration: underline;
+        }
+    }
+    .wedding-venue {
+        font-weight: bold;
+        a {
+            color: #333;
         }
     }
 }
