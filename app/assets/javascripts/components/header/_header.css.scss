@@ -2,9 +2,9 @@ header-component {
     z-index: 1;
 }
 .navbar {
-  margin-bottom: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  margin-bottom: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
   font-family: 'Calligraffitti', cursive;
   font-size: 18px;
   font-weight: bold;

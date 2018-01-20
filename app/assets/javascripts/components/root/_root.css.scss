@@ -14,7 +14,7 @@ button:focus {
 }
 .modal {
     background-color: rgba(#ebebeb, .4);
-    display: block;
+    display: block !important;
     .modal-content {
         float: none;
         border: 0;

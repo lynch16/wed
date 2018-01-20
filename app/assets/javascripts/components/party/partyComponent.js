@@ -34,9 +34,9 @@ function partyController() {
       description: "Currently residing in Los Angeles, Tara is a night owl who spends her nights either in pajamas reading until 4am or attending the Golden Globes. Initially bonded with the Bride during an AP Biology summer project, they remain long distance pals through their mutual love of Papa Johns pizza and secretly rummaging their parents' liquor cabinets.",
       type: 'Bridesmaid'
     }, {
-      name: 'Greg Bennet',
+      name: 'Greg Bennett',
       imgURL: 'assets/482347_10151574413961468_260726141_n.jpg',
-      description: "A Maine resident with a green thumb. This laid back guy loves music, bonfires with good friends, his girlfriend, Molly, and their 2 dogs.",
+      description: "A Maine resident with a green thumb. This laid back guy loves music, bonfires with good friends, his girlfriend, Molly, and their 2 dogs.  Always the guy to get the group together, whether it's for a concert, hike, or go-karts.",
       type: 'Groomsman'
   },{
       name: 'Julia Heald',
