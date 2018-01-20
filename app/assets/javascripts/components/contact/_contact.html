@@ -1,10 +1,5 @@
-<button type="button"
-        class="question-button"
-        name="contactUs"
-        ng-click="contactCtrl.showModal = true">Questions?</button>
 <div class="modal"
-     ng-if="contactCtrl.showModal"
-     ng-click="contactCtrl.showModal = false"
+     ng-click="contactCtrl.closeModal()"
      tabindex="-1" role="dialog"
      aria-labelledby="contactUs">
     <div class="modal-content col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1"
@@ -16,7 +11,7 @@
                     uib-tooltip="Close"
                     type="button" class="pull-left close"
                     aria-label="Close"
-                    ng-click="contactCtrl.showModal = false">
+                    ng-click="contactCtrl.closeModal()">
                     <span aria-hidden="true" ng-include="'assets/close.svg'"></span>
                 </button>
                  <h1 class="text-center satisfy">FAQs</h1>
@@ -27,6 +22,15 @@
                        <strong><p><span>Q: </span><span ng-bind="question.question"></span></p></strong>
                        <p><span>A: </span><span ng-bind="question.answer"></span></p>
                      </div>
+                     <div class="col-xs-12">
+                           <strong><p><span>Q: What if I have a question for the Bride and Groom?</span></p></strong>
+                           <div class="text-center">
+                               <button type="button"
+                                   class="contact-button"
+                                   name="questions"
+                                   ng-click="contactCtrl.page = 'contact'">Contact Us!</button>
+                           </div>
+                      </div>
                  </div>
              </div>
          </div>
@@ -93,52 +97,5 @@
                  </div>
              </div>
          </div>
-
-
     </div>
 </div>
-
-<!-- <div class="row contact">
-    <div class="col-xs-12">
-        <div class="row">
-            <div class="col-xs-12" style="background-color: white;">
-                <h1 class="text-center satisfy">Contact Us</h1>
-                <div class="row">
-                    <div class="col-sm-6 col-xs-12">
-                        <strong><p class="text-left satisfy">Need more information?</p></strong>
-                        <p class="text-left satisfy">Please fill out the form and Will or Jenna will be in touch!!</p>
-                    </div>
-                    <form name="contactForm" class="col-sm-6 col-xs-12" ng-submit="contactCtrl.submitForm(contactForm.$valid)" novalidate>
-                            <md-input-container class="md-block">
-                                <label for="name">Name</label>
-                                <input type="text" name="name"
-                                ng-model="contactCtrl.contactForm.name"
-                                required>
-                            </md-input-container>
-                            <md-input-container class="md-block">
-                                <label for="email">Email</label>
-                                <input type="text" name="email"
-                                ng-model="contactCtrl.contactForm.email"
-                                ng-required="!contactForm.phone">
-                            </md-input-container>
-                            <md-input-container class="md-block">
-                                <label for="phone">Phone #</label>
-                                <input type="text" name="phone"
-                                ng-model="contactCtrl.contactForm.phone"
-                                ng-required="!contactForm.email">
-                            </md-input-container>
-                            <md-input-container class="md-block">
-                                <label for="phone">Message</label>
-                                <textarea name="message"
-                                rows="2"
-                                ng-model="contactCtrl.contactForm.message"></textarea>
-                            </md-input-container>
-                            <button type="submit" class="btn" ng-class="contactForm.$valid ? 'btn-success': 'btn-danger'">Submit</button>
-                    </form>
-                </div>
-            </div>
-            <div class="col-xs-12 contact-background" style="height: 100vh;">
-            </div>
-        </div>
-    </div>
-</div> -->

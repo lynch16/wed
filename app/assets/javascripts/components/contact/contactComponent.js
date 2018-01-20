@@ -1,12 +1,13 @@
 app.component('contactComponent', {
   templateUrl: 'components/contact/_contact.html',
-  controller: ['contactService', 'alertService', contactController],
+  controller: ['contactService', 'alertService', '$state', contactController],
   controllerAs: "contactCtrl"
 });
 
-function contactController(contactService, alertService) {
+function contactController(contactService, alertService, $state) {
   var contactCtrl = this;
   contactCtrl.$onInit = function() {
+      console.log('start');
       contactCtrl.page = 'faq';
       contactCtrl.faq = [
       {
@@ -32,5 +33,8 @@ function contactController(contactService, alertService) {
           alertService.addAlert('Submitted!', 'success');
           contactCtrl.showModal = false;
       });
+  };
+  contactCtrl.closeModal = function () {
+      $state.go('^');
   };
 }

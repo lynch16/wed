@@ -9,23 +9,19 @@ var app = angular.module('app', [
 ]).run(function () {
 }).config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider){
   $locationProvider.hashPrefix('');
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/welcome');
   $stateProvider
     .state('root', {
       abstract: true,
       component: 'rootComponent'
     })
     .state('root.home', {
-        url: '/',
+        url: '/welcome',
         component: 'homeComponent'
     })
     .state('root.wedding', {
       url: '/wedding',
       component: 'weddingComponent'
-    })
-    .state('root.contact', {
-      url: '/contact',
-      component: 'contactComponent'
     })
     .state('root.party', {
       url: '/wedding-party',
@@ -38,9 +34,20 @@ var app = angular.module('app', [
     .state('root.registry', {
       url: '/registry',
       component: 'registryComponent'
-    })
-    .state('root.faq', {
-      url: '/FAQ',
-      component: 'faqComponent'
+  });
+
+    var states = [
+        'home',
+        'wedding',
+        'party',
+        'story',
+        'registry'
+    ];
+    angular.forEach(states, function(state) {
+        $stateProvider
+        .state('root.' + state + '.contact', {
+          url: '/contact',
+          component: 'contactComponent'
+      });
     });
 }]);
