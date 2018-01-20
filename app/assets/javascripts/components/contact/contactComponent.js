@@ -7,7 +7,6 @@ app.component('contactComponent', {
 function contactController(contactService, alertService, $state) {
   var contactCtrl = this;
   contactCtrl.$onInit = function() {
-      console.log('start');
       contactCtrl.page = 'faq';
       contactCtrl.faq = [
       {
@@ -22,10 +21,7 @@ function contactController(contactService, alertService, $state) {
     },{
         question: "How long does it take to get to La Piece?",
         answer: "Please allow at least 1 hour from Manchester, NH - Friday traffic can be crazy!!"
-      },{
-        question: "What if I have a question for the Bride and Groom?",
-        answer: "Reach out to use via our 'Contact Us' page! We will he happy to get back to you as soon as possible."
-    }];
+      }];
   };
   contactCtrl.submitForm = function(valid){
       if(!valid) {return;}
