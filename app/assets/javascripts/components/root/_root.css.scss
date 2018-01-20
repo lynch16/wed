@@ -15,6 +15,8 @@ button:focus {
 .modal {
     background-color: rgba(#ebebeb, .4);
     display: block !important;
+    position: absolute !important;
+    overflow-y: auto !important;
     .modal-content {
         float: none;
         border: 0;
