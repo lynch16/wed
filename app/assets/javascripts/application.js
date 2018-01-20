@@ -20,4 +20,5 @@
 //= require angular-animate
 //= require angular-aria
 //= require ngmap
+//= require bootstrap/dist/js/bootstrap
 //= require_tree .
