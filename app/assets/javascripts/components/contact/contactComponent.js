@@ -27,7 +27,7 @@ function contactController(contactService, alertService, $state) {
       if(!valid) {return;}
       contactService.submitContactForm(contactCtrl.contactForm).then(function(){
           alertService.addAlert('Submitted!', 'success');
-          contactCtrl.showModal = false;
+          contactCtrl.closeModal();
       });
   };
   contactCtrl.closeModal = function () {
