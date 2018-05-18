@@ -9,6 +9,11 @@ function partyController() {
   partyCtrl.$onInit = function() {
     partyCtrl.partyFilter = '';
     partyCtrl.weddingParty = [{
+      name: 'Jeremy Robidoux',
+      imgURL: 'assets/10995892_10100099264255591_3919713793636347010_n.jpg',
+      description: "Brother-in-law of the Groom since 2015. This guy really does love pina coladas (not so much getting caught in the rain) and a full day on the beach. He is also a die-hard New England Patriots fan who enjoys packing a cooler to watch his team play in his own living room; said cooler is typically full of Blue Moons.",
+      type: 'Officiant'
+    },{
       name: 'Ali Garner',
       imgURL: 'assets/196353_1944208885427_4307153_n.jpg',
       description: "Sisters with the Bride since 1991.  Three words that sum up the bride's only sister - talented, intelligent, and opinionated.  Ali knows the words to every single Mariah Carey song ever written.  She is also an eyeball enthusiast (Optometrist) but will not be giving eye exams during the wedding.",
