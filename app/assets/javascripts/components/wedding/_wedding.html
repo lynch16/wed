@@ -20,7 +20,7 @@
                         <h4 class="satisfy">{{weddingCtrl.activeMarker.title}}</h4>
                         <h5>{{weddingCtrl.activeMarker.type}}</h5>
                         <p ng-if="weddingCtrl.activeMarker.type === 'Accomodation'">Ask for the Loranger/Lynch Room block</p>
-                        <p ng-if="weddingCtrl.activeMarker.id === 2" ng-bind="'Shuttles Provided from La Piece to HI&S at 10pm following the reception.
+                        <p ng-if="weddingCtrl.activeMarker.type === 'Accomodation'" ng-bind="'Shuttles Provided from La Piece to HI&S at 11pm following the reception.
 
 '"></p>
                       <div ng-if="weddingCtrl.activeMarker.id === 1">
@@ -53,13 +53,17 @@
                     <p class="location-header" style="font-size:1.1em;">Near La Piece - the wedding venue</p>
                     <p><a target="_blank" style="font-size:1.25em;" href="http://hamptoninn3.hilton.com/en/hotels/new-hampshire/hampton-inn-and-suites-tilton-CONTNHX/index.html">Hampton Inn and Suites, Tilton, NH</a></p>
                     <p>(Ask for the Loranger/Lynch Room block)</p>
-                    <p ng-bind="'Shuttles Provided from La Piece to HI&S following the reception.'"></p>
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <p class="location-header" style="font-size:1.1em;">Near Lake Winnipesaukee</p>
                     <p><a target="_blank" style="font-size:1.25em;" href="http://www.opecheeinn.com/">Lake Opechee Inn and Spa, Laconia, NH</a></p>
                     <p>(Ask for the Loranger/Lynch Room block)</p>
                 </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <p ng-bind="'Buses to and from the wedding will be provided from both Hampton Inn and Suites and Lake Opechee Inn.'"></p>
+              </div>
             </div>
         </div>
       </div>
