@@ -34,14 +34,19 @@ var app = angular.module('app', [
     .state('root.registry', {
       url: '/registry',
       component: 'registryComponent'
-  });
+    })
+    .state('root.rehearsal', {
+      url: '/rehearsal',
+      component: 'rehearsalComponent'
+    });
 
     var states = [
         'home',
         'wedding',
         'party',
         'story',
-        'registry'
+        'registry',
+        'rehearsal',
     ];
     angular.forEach(states, function(state) {
         $stateProvider
