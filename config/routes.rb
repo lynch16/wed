@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 #     get '(*any)' => redirect { |params, request|
 #       URI.parse(request.url).tap { |uri| uri.host = "www.#{uri.host}" }.to_s
 #     }
-    match "/(*path)" => redirect {|params, request| 
-      "http://www.letsbelynches.com/#{params[:path]}"
+    match "/rehearsal" => redirect {|params, request| 
+      "http://www.letsbelynches.com/#/rehearsal"
     },  via: [:get, :post]
   end
   scope :api do
