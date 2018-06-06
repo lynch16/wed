@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 #       URI.parse(request.url).tap { |uri| uri.host = "www.#{uri.host}" }.to_s
 #     }
     match "/(*path)" => redirect {|params, request| 
-      URI.parse(request.url).tap { |uri| uri.host = "www.#{uri.host}/#{params[:path]}" }.to_s
+      "http://www.letsbelynches.com/#{params[:path]}"
     },  via: [:get, :post]
   end
   scope :api do
